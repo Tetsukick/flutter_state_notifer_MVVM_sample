@@ -5,7 +5,7 @@ class CounterModel extends Equatable {
   const CounterModel({this.count = 0});
 
   CounterModel increment() {
-    final int nextCount = count + 1;
+    final nextCount = count + 1;
     if (nextCount > 9) {
       return const CounterModel(count: 0);
     }

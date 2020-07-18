@@ -12,7 +12,7 @@ class CounterPage extends StatelessWidget {
     context.select<CounterState, int>((CounterState state) => state.count);
     return Scaffold(
       appBar: AppBar(
-        title: const Text('カウンターサンプル'),
+        title: const Text('sample couter app'),
       ),
       body: Center(
         child: Column(

@@ -19,13 +19,13 @@ provider + state notifier + freezed
 ### standard plugins
 - [dio](https://pub.dev/packages/dio)  
 A powerful Http client for Dart, which supports Interceptors, Global configuration, FormData, Request Cancellation, File downloading, Timeout etc.
- - [simple_logger](https://pub.dev/packages/simple_logger) 
+ - [simple_logger](https://pub.dev/packages/simple_logger)  
  Provides super simple APIs for logging. The log also includes caller info by setting includeCallerInfo to true. On Android Studio, jump to caller info by clicking the log
- - [auto_size_text](https://pub.dev/packages/auto_size_text)  
+ - [auto_size_text](https://pub.dev/packages/auto_size_text)   
  Flutter widget that automatically resizes text to fit perfectly within its bounds.
  
 ### directory structure
- lib/
+ lib/  
 　├ common/  
 　├ config/  
 　├ utils/  

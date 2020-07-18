@@ -29,6 +29,7 @@ dependencies:
   state_notifier: ^0.5.0
   flutter_state_notifier: ^0.4.2
   freezed_annotation:
+  simple_logger: ^1.7.0
 
 
   # The following adds the Cupertino Icons font to your application.

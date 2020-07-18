@@ -1,3 +1,4 @@
+import 'package:fluttertestcountapp/utils/logger.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'counter_model.freezed.dart';
@@ -15,6 +16,7 @@ abstract class CounterState with _$CounterState {
 extension CounterModel on CounterState {
   CounterState increment() {
     final nextCount = count + 1;
+    logger.info(nextCount);
     if (nextCount > 9) {
       return const CounterState(count: 0);
     }

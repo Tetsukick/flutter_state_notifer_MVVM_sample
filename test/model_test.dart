@@ -2,21 +2,19 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:fluttertestcountapp/counter_model.dart';
 
 void main() {
-  group("カウンターのテスト", () {
-    test("0から始まる", () {
-      const CounterModel counter = CounterModel();
+  group('test of counter model', () {
+    test('should start from 0', () {
+      const counter = CounterModel();
       expect(counter.count, 0);
-      final CounterModel nextCounter = counter.increment();
-      //イミュータブルなのでそのまま
+      final nextCounter = counter.increment();
       expect(counter.count, 0);
       expect(nextCounter.count, 1);
     });
-    test("9から0になる。", () {
-      const CounterModel counter = CounterModel(count: 9);
-      final CounterModel nextCounter = counter.increment();
+    test('should be 0 after 9', () {
+      const counter = CounterModel(count: 9);
+      final nextCounter = counter.increment();
       expect(counter.count, 9);
       expect(nextCounter.count, 0);
     });
   });
-  //todo マイナスの計算などの異常系のテストを追加していく
 }

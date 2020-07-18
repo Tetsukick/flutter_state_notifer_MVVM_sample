@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertestcountapp/Models/counter_model.dart';
 import 'package:fluttertestcountapp/ViewModels/counter_state_notifier.dart';
+import 'package:fluttertestcountapp/common/common_text_style.dart';
 import 'package:provider/provider.dart';
 
 class CounterPage extends StatelessWidget {
@@ -16,12 +17,13 @@ class CounterPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text(
+            Text(
               'You have pushed the button this many times:',
+              style: CommonTextStyles.captionBlack,
             ),
             Text(
               count.toString(),
-              style: Theme.of(context).textTheme.headline4,
+              style: CommonTextStyles.headlineBlue,
             ),
           ],
         ),

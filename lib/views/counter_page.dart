@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertestcountapp/Models/counter_model.dart';
 import 'package:fluttertestcountapp/ViewModels/counter_state_notifier.dart';
@@ -17,9 +18,12 @@ class CounterPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
+            AutoSizeText(
               'You have pushed the button this many times:',
               style: CommonTextStyles.captionBlack,
+              minFontSize: 10,
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
             ),
             Text(
               count.toString(),

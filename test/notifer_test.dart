@@ -3,9 +3,9 @@ import 'package:fluttertestcountapp/counter_model.dart';
 import 'package:fluttertestcountapp/counter_notifer.dart';
 
 void main() {
-  group("Count notifierのテスト", () {
-    test("カウント結果が変動する", () {
-      final CountNotifier countNotifier = CountNotifier();
+  group('Test of count notifier', () {
+    test('changing count result', () {
+      final countNotifier = CountNotifier();
       expect(countNotifier.debugState, const CounterModel(count: 0));
       countNotifier.next();
       expect(countNotifier.debugState, const CounterModel(count: 1));

@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_state_notifier/flutter_state_notifier.dart';
-import 'package:fluttertestcountapp/counter_model.dart';
-import 'package:fluttertestcountapp/counter_notifer.dart';
+import 'package:fluttertestcountapp/Models/counter_model.dart';
+import 'package:fluttertestcountapp/ViewModels/counter_state_notifier.dart';
 import 'package:provider/provider.dart';
 
-void main() {
-  runApp(MyApp());
-}
+void main() {runApp(MyApp());}
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -18,8 +16,8 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
-        home: StateNotifierProvider<CountNotifier, CounterModel>(
-          create: (_) => CountNotifier(),
+        home: StateNotifierProvider<CounterStateNotifier, CounterState>(
+          create: (_) => CounterStateNotifier(),
           child: MyHomePage(),
         ));
   }
@@ -29,7 +27,7 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final count =
-        context.select<CounterModel, int>((CounterModel state) => state.count);
+        context.select<CounterState, int>((CounterState state) => state.count);
     return Scaffold(
       appBar: AppBar(
         title: const Text('カウンターサンプル'),
@@ -49,7 +47,7 @@ class MyHomePage extends StatelessWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () => context.read<CountNotifier>().next(),
+        onPressed: () => context.read<CounterStateNotifier>().increment(),
         tooltip: 'Increment',
         child: Icon(Icons.add),
       ),

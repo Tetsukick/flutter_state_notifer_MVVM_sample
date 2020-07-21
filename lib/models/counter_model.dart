@@ -14,7 +14,7 @@ abstract class CounterState with _$CounterState {
 }
 
 extension CounterModel on CounterState {
-  CounterState increment() {
+  CounterState returnNextNumber() {
     final nextCount = count + 1;
     logger.info(nextCount);
     if (nextCount > 9) {

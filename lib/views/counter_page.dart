@@ -33,7 +33,7 @@ class CounterPage extends StatelessWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () => context.read<CounterStateNotifier>().increment(),
+        onPressed: () => context.read<CounterStateNotifier>().tapPlusBtn(),
         tooltip: 'Increment',
         child: Icon(Icons.add),
       ),

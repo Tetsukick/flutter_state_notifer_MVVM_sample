@@ -7,7 +7,7 @@ void main() {
     test('changing count result', () {
       final counterStateNotifier = CounterStateNotifier();
       expect(counterStateNotifier.debugState, const CounterState(count: 0));
-      counterStateNotifier.increment();
+      counterStateNotifier.tapPlusBtn();
       expect(counterStateNotifier.debugState, const CounterState(count: 1));
     });
   });

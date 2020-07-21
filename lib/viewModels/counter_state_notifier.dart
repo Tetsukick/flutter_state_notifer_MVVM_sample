@@ -3,6 +3,6 @@ import 'package:state_notifier/state_notifier.dart';
 
 class CounterStateNotifier extends StateNotifier<CounterState> {
   CounterStateNotifier() : super(const CounterState());
-  CounterState increment() => state =
-      state.copyWith(count: state.count).increment();
+  CounterState tapPlusBtn() => state =
+      state.copyWith(count: state.count).returnNextNumber();
 }

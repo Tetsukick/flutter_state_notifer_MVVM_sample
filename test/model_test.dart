@@ -6,13 +6,13 @@ void main() {
     test('should start from 0', () {
       const counter = CounterState();
       expect(counter.count, 0);
-      final nextCounter = counter.increment();
+      final nextCounter = counter.returnNextNumber();
       expect(counter.count, 0);
       expect(nextCounter.count, 1);
     });
     test('should be 0 after 9', () {
       const counter = CounterState(count: 9);
-      final nextCounter = counter.increment();
+      final nextCounter = counter.returnNextNumber();
       expect(counter.count, 9);
       expect(nextCounter.count, 0);
     });
